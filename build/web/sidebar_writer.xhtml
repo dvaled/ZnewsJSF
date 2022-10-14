@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    
+    <h:head>
+        <title>Sidebar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="resources/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
+        <script src="resources/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link href="resources/css/sidebar.css" rel="stylesheet"/>
+        <script src="resources/js/sidebar.js"></script>
+        
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sidebars/"/>
+            
+        
+    </h:head>
+    <h:body style="background-color: #181818" >
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-dark col-2" style="width: 280px;">
+            <a href="#znews" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" style="color: white">
+                <span class="fs-2">Znews Admin</span>
+            </a>
+            <hr/>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li>
+                    <a href="view_berita.xhtml" class="nav-link link-dark" style="color: white">
+                    Berita
+                    </a>
+                </li>
+            </ul>
+            <hr/>
+            <ul>
+                <li>
+                    <a href="login_writer.xhtml" class="nav-link link-dark" style="color: red">
+                    Logout
+                    </a>
+                </li>
+            </ul>
+            <hr/>
+        </div>
+    </h:body>
+</html>
+

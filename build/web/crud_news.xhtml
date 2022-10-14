@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Znews</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="resource/css/bootstrap.min.js" type="text/javascript"></script>
+        
+        <link href="resource/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resource/css/dash.css" rel="stylesheet" type="text/css"/>
+        <link href="resource/css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="resource/css/sidebar.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">Tulis Berita</h1>
+                <p class="lead">Tulis Berita baru pada sistem aplikasi berita</p>
+                <div class="row pt-5">
+                    <div class="col-12">
+                        <h:form styleClass="form-signin" prependId="false">
+                            <div class="mb-3">
+                                <label class="form-label">Id Berita</label>
+                                <b:inputText style="font-family: sans-serif; font-size: 18px" placeholder="Masukkan ID Dicari" value="#{news.id}"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Judul Berita</label>
+                                <b:inputText style="font-family: sans-serif; font-size: 18px" placeholder="Masukan Judul berita disini..." value="#{news.title}"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Deskripsi Berita</label>
+                                <b:inputTextarea style="font-family: sans-serif; font-size: 18px" placeholder="Masukan deskripsi berita disini..." value="#{news.description}"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Writer</label>
+                                <b:inputText style="font-family: sans-serif; font-size: 18px" placeholder="Masukan nama penulis berita disini..." value="#{news.writer}"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Isi Berita</label>
+                                <b:inputTextarea style="font-family: sans-serif; font-size: 18px" placeholder="Masukan isi berita disini..." value="#{news.content}"/>
+                            </div>
+                            <div class="mb-3">
+                                <b:commandButton look="primary btn-success" value="Cari Data Pelanggan" icon="search" action="#{news.getbyid()}"/>
+                                <br/><br/>
+                                <b:commandButton type="submit" class="btn btn-primary btn-small btn-rounded" look="primary btn-success" value="TAMBAH"  icon="" action="#{news.save()}"/>
+                                &nbsp;&nbsp;&nbsp;
+                                <b:commandButton look="primary btn-success" value="UBAH" icon="edit" action="#{news.update}"/>
+                                <br/><br/>
+                                <b:commandButton look="btn btn-sm btn-danger" value="HAPUS" icon="trash" action="#{news.delete}"/>
+                                &nbsp;&nbsp;&nbsp;
+                                <b:commandButton type="back" class="btn btn-primary btn-small btn-rounded"  value="Back" action="view_berita"/>
+                               </div> 
+                                
+                            
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </h:body>
+</html>
+

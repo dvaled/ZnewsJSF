@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Znews</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="resource/css/bootstrap.min.js" type="text/javascript"></script>
+        <link href="resource/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="resource/css/dash.css" rel="stylesheet" type="text/css"/>
+        <link href="resource/css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="resource/css/sidebar.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body class="d-flex" style="background-color: white">
+        <ui:include src="sidebar.xhtml"/>
+        <h:form styleClass="form-signin" prependId="false">
+        <div class="container-fluid">
+            <div class="col-12" style="margin-left: 40rem; margin-top: 13rem">
+                    <center>
+                        <b:container style="width: 100%; background-color: #dcffbd;">
+                                <br/>
+                                <h:outputLabel style="font-family: sans-serif; font-size: 35px">Writer</h:outputLabel>
+                                <br/><br/>
+                                <table>
+                                    <tr>
+                                        <td >
+                                            <h:outputLabel style="font-family: sans-serif; font-size: 24px">ID Writer</h:outputLabel>
+                                        </td>
+                                        <td width="5%"></td>
+                                        <td><b:inputText style="font-family: sans-serif; font-size: 18px" placeholder="Masukkan ID Dicari" value="#{writeer.id}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="Cari Data Pelanggan" icon="search" action="#{writeer.getbyid()}"/>
+                                            </center>
+                                            <br/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: sans-serif; font-size: 24px">Username:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: sans-serif; font-size: 18px" value="#{writeer.username}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h:outputLabel style="font-family: sans-serif; font-size: 24px">password:</h:outputLabel></td>
+                                        <td></td>
+                                        <td><b:inputText style="font-family: sans-serif; font-size: 18px" value="#{writeer.password}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <center>
+                                                <b:commandButton look="primary btn-success" value="UBAH" icon="edit" action="#{writeer.update}"/>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <b:commandButton look="primary btn-success" value="HAPUS" icon="trash" action="#{writeer.delete}"/>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <b:commandButton look="primary btn-success" value="TAMBAH"  icon="" action="#{writeer.save}"/>                                           
+                                            </center>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br/>
+                        </b:container>
+                    </center>
+                <br/>
+                <a style="font-size: 25px" class="dropdown-item" href="view_admin.xhtml">back</a>
+            </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
